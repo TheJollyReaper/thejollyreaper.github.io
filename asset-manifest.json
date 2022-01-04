@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/TheJollyReaper/thejollyreaper.github.io.git/static/css/main.073c9b0a.css",
+    "main.js": "/TheJollyReaper/thejollyreaper.github.io.git/static/js/main.5857c908.js",
+    "static/js/787.6ef7d8de.chunk.js": "/TheJollyReaper/thejollyreaper.github.io.git/static/js/787.6ef7d8de.chunk.js",
+    "static/media/logo.svg": "/TheJollyReaper/thejollyreaper.github.io.git/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/TheJollyReaper/thejollyreaper.github.io.git/index.html",
+    "main.073c9b0a.css.map": "/TheJollyReaper/thejollyreaper.github.io.git/static/css/main.073c9b0a.css.map",
+    "main.5857c908.js.map": "/TheJollyReaper/thejollyreaper.github.io.git/static/js/main.5857c908.js.map",
+    "787.6ef7d8de.chunk.js.map": "/TheJollyReaper/thejollyreaper.github.io.git/static/js/787.6ef7d8de.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.5857c908.js"
+  ]
+}
