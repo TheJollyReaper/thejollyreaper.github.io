@@ -1,38 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
+:root {
+  --selected-highlight-color: var(--green-hightlight-color);
+  --selected-highlight-color-focused: var(--green-hightlight-color-focused);
+
+  --selected-primary-color: var(--green-primary-color);
+  --selected-background: var(--green-background);
+  --selected-background-after: var(--green-background-after);
+  --selected-message-orientation: var(--left-message-orientation);
+
+  --left-message-orientation: left;
+  --right-message-orientation: right;
+
+  /* Green */
+  --green-primary-color: rgb(51, 255, 0);
+  --green-background: linear-gradient(rgba(0, 45, 5, 0.749) 50%, rgba(0, 56, 9, 0.616) 50%), linear-gradient(90deg, rgba(0, 66, 17, 0.555), rgba(0, 54, 0, 0.726), rgba(6, 39, 0, 0.726));
+  --green-background-after:  rgba(3, 58, 5, 0.829);
+  --green-hightlight-color: rgba(19, 230, 11, 0.281);
+  --green-hightlight-color-focused: rgba(1, 143, 13, 0.822);
+
+  /* Amber */
+  --amber-primary-color: rgb(255,182,66);
+  --amber-background: linear-gradient(rgba(180, 111, 0, 0.749) 50%, rgba(185, 119, 13, 0.616) 50%), linear-gradient(90deg, rgba(144, 89, 0, 0.555), rgba(233, 155, 31, 0.726), rgba(224, 145, 16, 0.534));
+  --amber-background-after:  rgba(102, 79, 5, 0.829);
+  --amber-hightlight-color: rgba(102, 79, 5, 0.493);
+  --amber-hightlight-color-focused: rgba(143, 93, 1, 0.822);
+
+  /* Blue */
+  --blue-primary-color: rgb(0, 188, 235);
+  --blue-background: linear-gradient(rgba(48, 3, 119, 0.749) 50%, rgba(0, 36, 153, 0.616) 50%), linear-gradient(90deg, rgba(0, 56, 241, 0.555), rgba(7, 106, 136, 0.712), rgba(0, 17, 112, 0.534));
+  --blue-background-after:  rgba(0, 108, 141, 0.829);
+  --green-hightlight-color: rgba(19, 230, 11, 0.281);
+  --green-hightlight-color-focused: rgba(1, 143, 13, 0.822);
+
+  /* Contrast */
+  --contrast-primary-color: rgb(255, 255, 255);
+  --contrast-background: linear-gradient(rgba(26, 26, 26, 0.749) 50%, rgba(31, 30, 30, 0.616) 50%), linear-gradient(90deg, rgba(37, 37, 37, 0.555), rgba(8, 8, 8, 0.712), rgba(19, 19, 19, 0.534));
+  --contrast-background-after:  rgba(0, 0, 0, 0.829);
+  --green-hightlight-color: rgba(19, 230, 11, 0.281);
+  --green-hightlight-color-focused: rgba(1, 143, 13, 0.822);
+
+  /* Watermelon */
+  --watermelon-primary-color: rgb(51, 255, 0);
+  --watermelon-background: linear-gradient(rgba(245, 12, 12, 0.749) 50%, rgba(161, 0, 0, 0.616) 50%), linear-gradient(90deg, rgba(126, 0, 0, 0.555), rgba(141, 1, 1, 0.712), rgba(245, 12, 12, 0.534));
+  --watermelon-background-after:  rgba(245, 12, 12, 0.829);
+  --green-hightlight-color: rgba(19, 230, 11, 0.281);
+  --green-hightlight-color-focused: rgba(1, 143, 13, 0.822);
+}
+
+img {
+  width: 10vw;
+  border-radius: 5vw;
+}
+
 .App {
+  animation: textShadow 10s infinite;
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Share Tech Mono', monospace;
+  overflow: hidden;
+}
+
+.content {
+  width: 75vw;
+  height: 75vh;
+  position: relative;
+  left: 12.5vw;
+  top: 15vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.row {
+  width: 100%;
+  height: 5vh;
+  display: flex;
+  align-items: center;
+  background-color: var(--selected-background-after);
+  border-radius: .3vw;
+}
+
+.row:hover {
+  background-color: var(--selected-primary);
+}
+
+.menu-text {
+  margin-left: 1vw;
+}
+
+.body-text {
+  width: 60vw;
+  left: 20vw;
+  position: relative;
+  text-align: left;
+  line-height: 3vh;
+}
+
+.header{
+  background:rgba(255,255,255,0.2);
+  border-bottom:1px solid var(--selected-primary-color);
+  height: 2.5rem;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 12px;
+  font-size:1.2rem;
+  color:white;
+  font-weight: bold;
+}
+
+.text-input{
+  background:rgba(255,255,255,0.2);
+  border-top:1px solid var(--selected-primary-color);
+  height: 2.5rem;
+  position: relative;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.theme-selector{
+  color: var(--selected-primary-color);
+  font-size: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@keyframes flicker {
+  0% {
+    opacity: 0.27861;
   }
-  to {
-    transform: rotate(360deg);
+  5% {
+    opacity: 0.34769;
   }
+  10% {
+    opacity: 0.23604;
+  }
+  15% {
+    opacity: 0.90626;
+  }
+  20% {
+    opacity: 0.18128;
+  }
+  25% {
+    opacity: 0.83891;
+  }
+  30% {
+    opacity: 0.65583;
+  }
+  35% {
+    opacity: 0.67807;
+  }
+  40% {
+    opacity: 0.26559;
+  }
+  45% {
+    opacity: 0.84693;
+  }
+  50% {
+    opacity: 0.96019;
+  }
+  55% {
+    opacity: 0.08594;
+  }
+  60% {
+    opacity: 0.20313;
+  }
+  65% {
+    opacity: 0.71988;
+  }
+  70% {
+    opacity: 0.53455;
+  }
+  75% {
+    opacity: 0.37288;
+  }
+  80% {
+    opacity: 0.71428;
+  }
+  85% {
+    opacity: 0.70419;
+  }
+  90% {
+    opacity: 0.7003;
+  }
+  95% {
+    opacity: 0.36108;
+  }
+  100% {
+    opacity: 0.24387;
+  }
+}
+@keyframes textShadow {
+  0% {
+    text-shadow: 0.4389924193300864px 0 1px rgba(0,30,255,0.5), -0.4389924193300864px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  5% {
+    text-shadow: 2.7928974010788217px 0 1px rgba(0,30,255,0.5), -2.7928974010788217px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  10% {
+    text-shadow: 0.02956275843481219px 0 1px rgba(0,30,255,0.5), -0.02956275843481219px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  15% {
+    text-shadow: 0.40218538552878136px 0 1px rgba(0,30,255,0.5), -0.40218538552878136px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  20% {
+    text-shadow: 3.4794037899852017px 0 1px rgba(0,30,255,0.5), -3.4794037899852017px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  25% {
+    text-shadow: 1.6125630401149584px 0 1px rgba(0,30,255,0.5), -1.6125630401149584px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  30% {
+    text-shadow: 0.7015590085143956px 0 1px rgba(0,30,255,0.5), -0.7015590085143956px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  35% {
+    text-shadow: 3.896914047650351px 0 1px rgba(0,30,255,0.5), -3.896914047650351px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  40% {
+    text-shadow: 3.870905614848819px 0 1px rgba(0,30,255,0.5), -3.870905614848819px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  45% {
+    text-shadow: 2.231056963361899px 0 1px rgba(0,30,255,0.5), -2.231056963361899px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  50% {
+    text-shadow: 0.08084290417898504px 0 1px rgba(0,30,255,0.5), -0.08084290417898504px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  55% {
+    text-shadow: 2.3758461067427543px 0 1px rgba(0,30,255,0.5), -2.3758461067427543px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  60% {
+    text-shadow: 2.202193051050636px 0 1px rgba(0,30,255,0.5), -2.202193051050636px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  65% {
+    text-shadow: 2.8638780614874975px 0 1px rgba(0,30,255,0.5), -2.8638780614874975px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  70% {
+    text-shadow: 0.48874025155497314px 0 1px rgba(0,30,255,0.5), -0.48874025155497314px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  75% {
+    text-shadow: 1.8948491305757957px 0 1px rgba(0,30,255,0.5), -1.8948491305757957px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  80% {
+    text-shadow: 0.0833037308038857px 0 1px rgba(0,30,255,0.5), -0.0833037308038857px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  85% {
+    text-shadow: 0.09769827255241735px 0 1px rgba(0,30,255,0.5), -0.09769827255241735px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  90% {
+    text-shadow: 3.443339761481782px 0 1px rgba(0,30,255,0.5), -3.443339761481782px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  95% {
+    text-shadow: 2.1841838852799786px 0 1px rgba(0,30,255,0.5), -2.1841838852799786px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+  100% {
+    text-shadow: 2.6208764473832513px 0 1px rgba(0,30,255,0.5), -2.6208764473832513px 0 1px rgba(255,0,80,0.3), 0 0 3px;
+  }
+}
+.App::after {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: var(--selected-background-after);
+  opacity: 0;
+  z-index: -1;
+  pointer-events: none;
+  animation: flicker 45s infinite;
+}
+.App::before {
+  content: " ";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: var(--selected-background);
+  z-index: -1;
+  background-size: 100% 2px, 3px 100%;
+  pointer-events: none;
 }
