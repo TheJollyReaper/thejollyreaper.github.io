@@ -54,15 +54,18 @@ img {
 }
 
 .App {
+  position: absolute;
   animation: textShadow 10s infinite;
   text-align: center;
   width: 100vw;
-  height: 100vh;
+  height: 130vh;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   font-family: 'Share Tech Mono', monospace;
-  overflow: hidden;
+  /* overflow: hidden; */
+  background-size:cover;
+  background-repeat: repeat-y;
 }
 
 .content {
@@ -100,7 +103,7 @@ img {
   line-height: 3vh;
 }
 
-.header{
+/* .header{
   background:rgba(255,255,255,0.2);
   border-bottom:1px solid var(--selected-primary-color);
   height: 2.5rem;
@@ -111,7 +114,7 @@ img {
   font-size:1.2rem;
   color:white;
   font-weight: bold;
-}
+} */
 
 .text-input{
   background:rgba(255,255,255,0.2);
